@@ -1,0 +1,5 @@
+services:
+  web-show:
+    build: packages/web-shop/.
+    ports:
+      - 8080:3000
