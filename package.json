@@ -10,6 +10,8 @@
   "author": "Martin Karry <martin.karry@mni.thm.de>",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "web:dev": "yarn workspace web-shop run dev"
+    "web:dev": "yarn workspace web-shop run dev",
+    "web:build": "yarn workspace web-shop run build",
+    "web:start": "yarn workspace web-shop run start"
   }
 }
