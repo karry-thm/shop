@@ -1,5 +1,7 @@
+import Frame from "../util/shop/components/frame/Frame.component";
+
 export default function Home() {
-  return <div>
-    <h1>Hello Shop!!!</h1>
-  </div>
+  return <Frame>
+    <div>TBD</div>
+  </Frame>
 }

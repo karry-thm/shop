@@ -1,0 +1,82 @@
+@import 'colors.scss';
+
+* {
+    position: relative;
+    color: $gray;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.item-card {
+    .title {
+        color: $green;
+        font-weight: bold;
+    }
+
+    .description {
+        color: $gray;
+    }
+}
+
+#frame {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 25vw auto;
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer"
+    ;
+
+    #nav {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: "logo icons";
+        grid-area: header;
+        background: $gray;
+
+        #logo {
+            grid-area: logo;
+            color: $green;
+            padding: 5px;
+        }
+
+        #icons {
+            text-align: right;
+            grid-area: icons;
+            color: $green;
+        }
+    }
+
+    #sidebar {
+        grid-area: sidebar;
+
+        ul {
+            li {
+                text-decoration: none;
+                a {
+                    text-decoration: none;
+                    transition: all .5s linear;
+                    &.active {
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    #content {
+        grid-area: content;
+    }
+
+    #footer {
+        grid-area: footer;
+        background: $gray;
+        color: $green;
+    }
+}

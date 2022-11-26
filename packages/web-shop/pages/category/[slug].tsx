@@ -1,13 +1,15 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Category from "../../util/shop/Category.interface";
+import Frame from "../../util/shop/components/frame/Frame.component";
+import ItemCards from "../../util/shop/components/ItemCards.component";
 import { SHOP_DATA } from "../../util/shop/data/shop.data";
 import Slug from "../../util/shop/Slug.interface";
 
 const CategoryPage: NextPage<Category> = (category) => {
-    return <div>
+    return <Frame categorySlug={category.slug}>
         <h1>{category.name}</h1>
-        <div>{JSON.stringify(category.items)}</div>
-    </div>
+        <ItemCards items={category.items} />
+    </Frame>
 }
 
 export default CategoryPage;

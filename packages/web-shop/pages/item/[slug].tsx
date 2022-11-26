@@ -2,11 +2,13 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Item from "../../util/shop/Item.interface";
 import { SHOP_DATA } from "../../util/shop/data/shop.data";
 import Slug from "../../util/shop/Slug.interface";
+import Frame from "../../util/shop/components/frame/Frame.component";
+import ItemDetails from "../../util/shop/components/ItemDetails.component";
 
 const ItemPage: NextPage<Item> = (item) => {
-    return <div>
-        <h1>{item.name}</h1>
-    </div>
+    return <Frame>
+        <ItemDetails item={item} />
+    </Frame>
 }
 
 export default ItemPage;
